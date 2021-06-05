@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image:url("./componet/backgroundMain.jpg") ;
+    background-attachment: fixed;
+
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;  /*整個畫面高*/
+}
+.row{
+    text-align: center;
+    padding: 50px 0px ;
+}
+.col{
+    
+    display: inline-block;
+    margin: 10px;
+    
+}
+.preview{
+    font-size: 0;  /*https://www.cnblogs.com/JoannaQ/archive/2013/03/16/2962443.html*/
+}
+.preview img{
+    width: 100%;
+    
+}
+.buttom{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    position: relative;
+}
+
+.manPhoto{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden; 
+
+}
+
+.manPhoto img{
+    width: 100%;
+    
+}
+.channel_info{
+    text-align: left;
+    color:white;
+    position: absolute;
+    top: 10px;
+    left: 70px;
+}
+.channel_name{
+    margin-bottom: 8px;
+}
