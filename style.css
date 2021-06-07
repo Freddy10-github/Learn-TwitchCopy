@@ -1,70 +1,61 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-image:url("./componet/backgroundMain.jpg") ;
-    background-attachment: fixed;
-
+body {
+  background-image: url("./componet/backgroundMain.jpg");
+  background-attachment: fixed;
 }
-.container{
-    background-color: rgba(0, 0, 0, 0.5);
-    min-height: 100vh;  /*整個畫面高*/
+.container {
+  background-color: rgba(0,0,0,0.5);
+  min-height: 100vh; /*整個畫面高*/
 }
-.row{
-    text-align: center;
-    padding: 50px 0px ;
+.row {
+  text-align: center;
+  padding: 50px 0px;
 }
-.col{
-    background-color: rgba(11, 11, 11, 0.5);
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    margin: 10px;
-    box-sizing: border-box;  
-    transition: all .3s;  
+.col {
+  background-color: rgba(11,11,11,0.5);
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.05);
+  margin: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s;
 }
-
-.col:hover{
-    cursor: pointer;
-    box-shadow: 5px 5px  20px 5px rgba(0, 0, 0, 0.5);
+.col:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.5);
 }
-
-.preview:hover{
-    filter: brightness(1.5);
-
+.preview:hover {
+  filter: brightness(1.5);
 }
-.preview{
-    font-size: 0;  /*https://www.cnblogs.com/JoannaQ/archive/2013/03/16/2962443.html*/
+.preview {
+  font-size: 0; /*https://www.cnblogs.com/JoannaQ/archive/2013/03/16/2962443.html*/
 }
-.preview img{
-    width: 100%;
-    
+.preview img {
+  width: 100%;
 }
-.buttom{
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    position: relative;
+.buttom {
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  position: relative;
 }
-
-.manPhoto{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden; 
-
+.manPhoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
 }
-
-.manPhoto img{
-    width: 100%;
-    
+.manPhoto img {
+  width: 100%;
 }
-.channel_info{
-    text-align: left;
-    color:white;
-    position: absolute;
-    top: 10px;
-    left: 70px;
+.channel_info {
+  text-align: left;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 70px;
 }
-.channel_name{
-    margin-bottom: 8px;
+.channel_name {
+  margin-bottom: 8px;
 }
