@@ -28,7 +28,7 @@ getData((err, data) => {
 })
 const getColumn = data => {
     return `
-    <div class="col">
+    <div class="col" onclick="window.open('${data.channel.url}', '_blank')">
                 <div class="preview"><img src="${data.preview.medium}" onload="this.style.opacity=1"></div>
                 <div class="buttom">
                     <div class="manPhoto"><img src="${data.channel.logo}" onload="this.style.opacity=1"></div>
