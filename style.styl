@@ -10,19 +10,22 @@ body
 .container
     background-color: rgba(0, 0, 0, 0.5);
     min-height: 100vh;  /*整個畫面高*/
-
-.row
     text-align: center;
+.row
     padding: 50px 0px ;
+    font-size: 0px;
+
 
 .col
     background-color: rgba(11, 11, 11, 0.5);
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.05);
     margin: 10px;
-    box-sizing: border-box;  
-    transition: all .3s;  
-
+    box-sizing: border-box;
+    width: 300px;  
+    transition: all .3s;
+      
+    
 
     &:hover
         cursor: pointer;
@@ -76,6 +79,7 @@ body
     position: absolute;
     top: 10px;
     left: 70px;
+    font-size: 14px;
 
 .channel_name
     margin-bottom: 8px;

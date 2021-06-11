@@ -1,11 +1,14 @@
+const Accept = 'application/vnd.twitchtv.v5+json';
+const limit = 18;
+const clientId = 'luz7ktst4nb0p2ur5eee2apvgmf837'; 
+var nowIndex = 0 ;
+var isLoading = false;
 
-const getData = (cb) => {
-    const Accept = 'application/vnd.twitchtv.v5+json';
-    const clientId = 'luz7ktst4nb0p2ur5eee2apvgmf837';
-    const limit = 20;
-    const apiUrl = 'https://api.twitch.tv/kraken/streams/?game=League%20of%20Legends&limit=' + limit;
-    //https://github.com/Lidemy/forum/discussions/138#discussion-3400596
+//https://github.com/Lidemy/forum/discussions/138#discussion-3400596
 
+const getData = (cb) => {       
+    const apiUrl = 'https://api.twitch.tv/kraken/streams/?game=League%20of%20Legends&limit=' + limit + '&offset=' + nowIndex;
+    isLoading = true;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", apiUrl, true);
     xhr.setRequestHeader('Accept',Accept);
@@ -18,14 +21,19 @@ const getData = (cb) => {
         }
 }
 }
+const appendData = () => {
+    getData((err, data) => {
+        const streams = data.streams;
+        const $row = $('.row');
+        for (let index = 0; index < streams.length; index++) {
+            $row.append(getColumn(streams[index]));        
+        }
+    })
+    nowIndex += limit ;
+    setTimeout(() => {isLoading = false;}, 1500);
+    
+}
 
-getData((err, data) => {
-    const streams = data.streams;
-    const $row = $('.row');
-    for (let index = 0; index < streams.length; index++) {
-        $row.append(getColumn(streams[index]));        
-    }
-})
 const getColumn = data => {
     return `
     <div class="col" onclick="window.open('${data.channel.url}', '_blank')">
@@ -39,3 +47,13 @@ const getColumn = data => {
                 </div>
             </div>`;
 }
+
+appendData();
+$(window).scroll(function(){
+    //console.log($(window).scrollTop() + $(window).height());
+    if($(window).scrollTop() + $(window).height()>= $(document).height()-300){
+        //load new channel
+        if(!isLoading)
+            appendData();
+    }        
+})
