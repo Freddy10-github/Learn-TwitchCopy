@@ -12,10 +12,11 @@ body
 
     a
         padding: 0 8px;
+        
 
         &:hover
             color #00f;
-            font-size: 40px;
+            font-weight: bold
 
 
 
@@ -86,12 +87,19 @@ body
     
 
 .channel_info
+    width: 230px;
     text-align: left;
     color:white;
     position: absolute;
-    top: 10px;
+    top: 14px;
     left: 70px;
     font-size: 14px;
+    
+
 
 .channel_name
-    margin-bottom: 8px;
+
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+        

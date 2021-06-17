@@ -16,7 +16,7 @@ body {
 }
 .menu a:hover {
   color: #00f;
-  font-size: 40px;
+  font-weight: bold;
 }
 .container {
   background-color: rgba(0,0,0,0.5);
@@ -78,13 +78,16 @@ body {
   width: 100%;
 }
 .channel_info {
+  width: 230px;
   text-align: left;
   color: #fff;
   position: absolute;
-  top: 10px;
+  top: 14px;
   left: 70px;
   font-size: 14px;
 }
 .channel_name {
-  margin-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
