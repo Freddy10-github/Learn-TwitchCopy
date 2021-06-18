@@ -1,4 +1,4 @@
-const limit = 9; 
+const limit = 15; 
 let LANG = "zh";
 var nowIndex = 0 ;
 var isLoading = false;
@@ -35,7 +35,7 @@ const appendData = (lang) => {
         }
     })
     nowIndex += limit ;
-    setTimeout(() => {isLoading = false;}, 1500); //setting isLoading => 避免持續發送request
+    setTimeout(() => {isLoading = false;}, 1000); //setting isLoading => 避免持續發送request
                                                   //serring delay => 避免滑鼠滾輪抖動，發送2~3個request
     
 }
@@ -69,7 +69,7 @@ const changeLang = (lang) =>{
 
 appendData(LANG);
 $(window).scroll(function(){  //scroll event
-    if($(window).scrollTop() + $(window).height()>= $(document).height()-300){  
+    if($(window).scrollTop() + $(window).height()>= $(document).height()-400){  
         //load new channel
         if(!isLoading)      //isLoading is for 避免持續發送request
             appendData(LANG);
