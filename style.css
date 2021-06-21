@@ -7,17 +7,33 @@ body {
   background-attachment: fixed;
 }
 .menu {
-  color: #ccc;
-  padding: 10px;
-  font-size: 30px;
+  background-color: rgba(255,255,255,0.8);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 5px 0;  
 }
-.menu a {
-  padding: 0 8px;
+.menu input {
+  display: none;
 }
-.menu a:hover {
-  color: #00f;
-  font-weight: bold;
+.menu .menu-lang input:checked + span
+{
+  background-color: #FFD306;
 }
+.menu .menu-game input:checked + span{
+  background-color: #FF8F59;
+}
+.menu label{
+  cursor: pointer;
+  margin: 2px 5px;
+}
+.menu span{
+  padding: 2px 5px;
+  margin: 5px;
+}
+
+
 .container {
   background-color: rgba(0,0,0,0.5);
   min-height: 100vh; /*整個畫面高*/
